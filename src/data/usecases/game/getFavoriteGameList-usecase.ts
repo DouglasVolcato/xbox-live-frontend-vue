@@ -87,7 +87,7 @@ export class GetFavoriteGameListUseCase implements Service {
   }
 
   private addEventListenerToGames(navigateCallbackFunction = () => {}): void {
-    const games = document.querySelectorAll(".favoriteGameList-gameCard");
+    const games: any = document.querySelectorAll(".favoriteGameList-gameCard");
     for (const game of games) {
       game.addEventListener("click", () => {
         this.gameIdHandler.removeGameId();

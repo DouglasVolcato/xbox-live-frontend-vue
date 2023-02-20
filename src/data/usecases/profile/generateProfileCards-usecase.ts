@@ -77,7 +77,7 @@ export class GenerateProfileCardsUseCase implements Service {
   private addEventListenerToProfiles(
     navigateCallbackFunction = () => {}
   ): void {
-    const profiles = document.querySelectorAll(".profileList-div");
+    const profiles: any = document.querySelectorAll(".profileList-div");
     for (const profile of profiles) {
       profile.addEventListener("click", () => {
         this.profileIdHandler.removeProfileId();

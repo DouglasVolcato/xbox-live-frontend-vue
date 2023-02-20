@@ -81,7 +81,7 @@ export class GetGamesAdminListUseCase implements Service {
   }
 
   private addEventListenerToGames(navigateCallbackFunction = () => {}): void {
-    const games = document.querySelectorAll(".adminGameCard");
+    const games: any = document.querySelectorAll(".adminGameCard");
     for (const game of games) {
       game.addEventListener("click", () => {
         this.gameIdHandler.removeGameId();

@@ -94,7 +94,7 @@ export class GetLatestGameListUseCase implements Service {
   }
 
   private addEventListenerToGames(navigateCallbackFunction = () => {}): void {
-    const games = document.querySelectorAll(".gameList-gameCard");
+    const games: any = document.querySelectorAll(".gameList-gameCard");
     for (const game of games) {
       game.addEventListener("click", () => {
         this.gameIdHandler.removeGameId();

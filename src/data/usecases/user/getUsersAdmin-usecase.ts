@@ -80,7 +80,7 @@ export class GetUsersAdminListUseCase implements Service {
   }
 
   private addEventListenerToUsers(navigateCallbackFunction = () => {}): void {
-    const users = document.querySelectorAll(".adminUserCard");
+    const users: any = document.querySelectorAll(".adminUserCard");
     for (const user of users) {
       user.addEventListener("click", () => {
         this.editionUserIdHandler.removeUserId();
