@@ -5,6 +5,7 @@
 
 <script setup>
 import { onMounted } from "vue";
+import { makeGameViewControllerFactory } from "../../factories/controllers/gameView-controller-factory";
 import HtmlComponent from "../helpers/htmlComponent-helper.vue";
 import RouteComposer from "../helpers/routeComposer-helper.vue";
 

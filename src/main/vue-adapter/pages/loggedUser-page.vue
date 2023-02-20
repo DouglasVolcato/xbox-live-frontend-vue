@@ -8,6 +8,7 @@ import HtmlComponent from "../helpers/htmlComponent-helper.vue";
 import RouteComposer from "../helpers/routeComposer-helper.vue";
 import { useRouter } from "vue-router";
 import { onMounted } from "vue";
+import { makeLoggedUserControllerFactory } from "../../factories/controllers/loggedUser-controller-factory";
 
 const router = useRouter();
 const loggedUserController = makeLoggedUserControllerFactory();
