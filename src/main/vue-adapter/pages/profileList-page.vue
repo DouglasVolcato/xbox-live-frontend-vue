@@ -8,6 +8,7 @@ import HtmlComponent from "../helpers/htmlComponent-helper.vue";
 import RouteComposer from "../helpers/routeComposer-helper.vue";
 import { useRouter } from "vue-router";
 import { makeProfileListControllerFactory } from "../../factories/controllers/profileList-controller-factory";
+import { onMounted } from "vue";
 
 const router = useRouter();
 const profileListController = makeProfileListControllerFactory();
