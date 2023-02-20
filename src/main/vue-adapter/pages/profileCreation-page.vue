@@ -8,13 +8,14 @@ import HtmlComponent from "../helpers/htmlComponent-helper.vue";
 import RouteComposer from "../helpers/routeComposer-helper.vue";
 import { useRouter } from "vue-router";
 import { makeProfileCreationControllerFactory } from "../../factories/controllers/profileCreation-controller-factory";
+import { onMounted } from "vue";
 
 const router = useRouter();
 const profileCreationController = makeProfileCreationControllerFactory();
 
-window.onload = () => {
+onMounted(() => {
   profileCreationController.createProfile(createProfile);
-};
+});
 
 function createProfile() {
   router.push("/profile-list");

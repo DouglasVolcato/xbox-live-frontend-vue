@@ -8,13 +8,14 @@ import { makeLoginControllerFactory } from "../../factories/controllers/login-co
 import HtmlComponent from "../helpers/htmlComponent-helper.vue";
 import RouteComposer from "../helpers/routeComposer-helper.vue";
 import { useRouter } from "vue-router";
+import { onMounted } from "vue";
 
 const router = useRouter();
 const loginController = makeLoginControllerFactory();
 
-window.onload = () => {
+onMounted(() => {
   loginController.makeLogin(login);
-};
+});
 
 function login() {
   router.push("/profile-list");

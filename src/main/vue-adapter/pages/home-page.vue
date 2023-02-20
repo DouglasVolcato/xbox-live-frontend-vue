@@ -8,14 +8,15 @@ import { makeHomePageControllerFactory } from "../../factories/controllers/homeP
 import HtmlComponent from "../helpers/htmlComponent-helper.vue";
 import RouteComposer from "../helpers/routeComposer-helper.vue";
 import { useRouter } from "vue-router";
+import { onMounted } from "vue";
 
 const router = useRouter();
 const homeController = makeHomePageControllerFactory();
 
-window.onload = () => {
+onMounted(() => {
   homeController.setGameList(gameSelected);
   homeController.updateHeader();
-};
+});
 
 function gameSelected() {
   router.push("/game-view");

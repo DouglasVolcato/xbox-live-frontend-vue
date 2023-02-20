@@ -12,10 +12,10 @@ import { makeProfileListControllerFactory } from "../../factories/controllers/pr
 const router = useRouter();
 const profileListController = makeProfileListControllerFactory();
 
-window.onload = () => {
+onMounted(() => {
   profileListController.updateProfileCards(profileSelected);
   profileListController.unlockAdminMenu(adminPageNavigation);
-};
+});
 
 function profileSelected() {
   router.push("/home-page");
